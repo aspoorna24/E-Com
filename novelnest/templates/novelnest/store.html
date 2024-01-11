@@ -1,0 +1,44 @@
+{% extends 'novelnest/main.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/store.css' %}">
+
+{% endblock head %}
+{% block content %}
+     <h3>Store</h3>
+
+     <div class="row">
+        {% for product in products %}
+        <div class="col-lg-4">
+            <div class="box-element product">
+                <img class="thumbnail" style="object-fit:cover;border:15px solid white; object-fit: cover;
+                width: 100%;" src="{{product.imageURL}}">
+                <div class="box-element product">
+                    <h6><strong>{{product.name}}</strong></h6>
+                    <hr>
+            
+                    <button data-product="{{product.id}}" data-action="add" id="add" class="update-cart" >Add to Cart</button>
+                    <button  id="view">View</button>
+                    <h4 style="display: inline-block; float: right"><strong>&#8377;{{product.price|floatformat:2}}</strong></h4>
+            
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+    </div>
+{% endblock content %}
+
+
+<!-- {% load static %}
+-- how to add external css
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<h3>store</h3>
+-- how to add the image
+<img src="{% static 'images/cart.png' %}">
+-->
+
+
+
+
+

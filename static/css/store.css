@@ -1,0 +1,23 @@
+#add {
+color:darkblue;
+background-color: white;
+border: 1px solid darkblue;
+padding: 5px;
+}
+
+#add:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+#view{
+    background-color: darkblue;
+    color: white;
+border: 1px solid darkblue;
+padding: 5px;
+}
+
+#view:hover{
+    color:darkblue;
+background-color: white;
+}
